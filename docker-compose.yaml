@@ -1,0 +1,14 @@
+version: "3.8"
+
+services:
+  python_api:
+    build: ./python_api
+    restart: always
+    environment:
+      - RESTART_INTERVAL=10
+
+  node_api:
+    build: ./node_api
+    restart: always
+    environment:
+      - RESTART_INTERVAL=10
