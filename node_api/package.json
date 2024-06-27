@@ -12,6 +12,7 @@
     "typescript": "^5.5.2"
   },
   "scripts": {
-    "start": "ts-node src/index.ts"
+    "start": "ts-node src/index.ts",
+    "test": "jest"
   }
 }
