@@ -10,6 +10,10 @@ app.get('/status', (req, res) => {
   res.json({ status: "Node.js API is running" });
 });
 
+app.get('/data', (req, res) => {
+  res.json({ data: "Here is some data from the Node.js API" });
+});
+
 app.listen(port, () => {
   // Simulate the restart delay
   const restartInterval = parseInt(process.env.RESTART_INTERVAL || '10', 10);
