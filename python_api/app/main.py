@@ -14,4 +14,4 @@ def status():
 if __name__ == "__main__":
     # Sleep for a specified interval before starting the app (to simulate the restart)
     time.sleep(int(os.environ.get("RESTART_INTERVAL", 10)))
-    app.run(host="0.0.0.0", port=5000)
+    app.run(host="0.0.0.0", port=5001)
