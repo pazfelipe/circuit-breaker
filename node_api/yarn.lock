@@ -724,6 +724,13 @@
   dependencies:
     undici-types "~5.26.4"
 
+"@types/opossum@^8.1.7":
+  version "8.1.7"
+  resolved "https://registry.yarnpkg.com/@types/opossum/-/opossum-8.1.7.tgz#2f3ac3283b4f2f2aebbc076cb4518dedb73b7073"
+  integrity sha512-nIihJLNA412EioGg7mHTwDY7nfmSb4TpnSMSsftZYQ+vvKf1GYz3WSWnKrxGyFaeWpoTD5FTnZabkhR8ql50Iw==
+  dependencies:
+    "@types/node" "*"
+
 "@types/qs@*":
   version "6.9.15"
   resolved "https://registry.yarnpkg.com/@types/qs/-/qs-6.9.15.tgz#adde8a060ec9c305a82de1babc1056e73bd64dce"
@@ -2326,6 +2333,11 @@ onetime@^5.1.2:
   integrity sha512-kbpaSSGJTWdAY5KPVeMOKXSrPtr8C8C7wodJbcsd51jRnmD+GZu8Y0VoU6Dm5Z4vWr0Ig/1NKuWRKf7j5aaYSg==
   dependencies:
     mimic-fn "^2.1.0"
+
+opossum@^8.1.4:
+  version "8.1.4"
+  resolved "https://registry.yarnpkg.com/opossum/-/opossum-8.1.4.tgz#2fa05e252bff7b936218b7f56909cb705e51d370"
+  integrity sha512-ktDDCD2MKX7yx8ZLtt57JrUE0IyYJthmTyXtaF4dEdPYHvX0kkWRiKkQkhEjtZnTNN5y1ErMriKNqOLqgpYXtQ==
 
 p-limit@^2.2.0:
   version "2.3.0"
