@@ -11,6 +11,11 @@ def status():
     return jsonify({"status": "Python API is running"}), 200
 
 
+@app.route("/data", methods=["GET"])
+def data():
+    return jsonify({"data": "Here is some data from the Python API"}), 200
+
+
 if __name__ == "__main__":
     # Sleep for a specified interval before starting the app (to simulate the restart)
     time.sleep(int(os.environ.get("RESTART_INTERVAL", 10)))
