@@ -25,10 +25,13 @@ app.get('/python-data', async (req, res) => {
   }
 });
 
-app.listen(port, () => {
-  // Simulate the restart delay
-  const restartInterval = parseInt(process.env.RESTART_INTERVAL || '10', 10);
-  setTimeout(() => {
-    console.log(`Node.js API is listening on port ${port}`);
-  }, restartInterval * 1000);
-});
+if (process.env.NODE_ENV !== 'test') {
+  app.listen(port, () => {
+    const restartInterval = parseInt(process.env.RESTART_INTERVAL || '10', 10);
+    setTimeout(() => {
+      console.log(`Node.js API is listening on port ${port}`);
+    }, restartInterval * 1000);
+  });
+}
+
+export default app;
