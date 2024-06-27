@@ -2,6 +2,7 @@
 from flask import Flask, jsonify
 import os
 import time
+import requests
 
 app = Flask(__name__)
 
@@ -14,6 +15,15 @@ def status():
 @app.route("/data", methods=["GET"])
 def data():
     return jsonify({"data": "Here is some data from the Python API"}), 200
+
+
+@app.route("/node-data", methods=["GET"])
+def node_data():
+    try:
+        response = requests.get("http://node_api:3000/data")
+        return jsonify({"node_data": response.json()}), 200
+    except requests.exceptions.RequestException as e:
+        return jsonify({"error": str(e)}), 500
 
 
 if __name__ == "__main__":
